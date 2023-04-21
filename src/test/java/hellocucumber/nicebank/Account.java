@@ -8,5 +8,6 @@ public class Account extends Model {
     public Account(int number) {
         setInteger("number", number);
         setString("balance", "0.00");
+        saveIt();
     }
 }

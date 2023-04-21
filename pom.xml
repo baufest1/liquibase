@@ -10,6 +10,7 @@
     <packaging>jar</packaging>
 
     <properties>
+        <cucumber.bom>7.11.2</cucumber.bom>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mysql.connector.java>8.0.26</mysql.connector.java>
     </properties>
@@ -25,7 +26,7 @@
             <dependency>
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-bom</artifactId>
-                <version>7.11.2</version>
+                <version>${cucumber.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

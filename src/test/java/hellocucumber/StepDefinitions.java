@@ -14,7 +14,7 @@ public class StepDefinitions {
             Base.open(
                     "com.mysql.jdbc.Driver",
                     "jdbc:mysql://localhost/bank",
-                    "myteller",
+                    "myTeller",
                     "password"
             );
         }

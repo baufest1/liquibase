@@ -109,7 +109,7 @@
                     <changeLogFile>src/test/resources/bank_schema.xml</changeLogFile>
                     <driver>com.mysql.jdbc.Driver</driver>
                     <url>jdbc:mysql://localhost/bank</url>
-                    <username>myteller</username>
+                    <username>myTeller</username>
                     <password>password</password>
                 </configuration>
             </plugin>

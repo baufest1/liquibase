@@ -1,24 +1,28 @@
 package hellocucumber;
 
 import hellocucumber.nicebank.Account;
-import io.cucumber.java.en.*;
-
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.javalite.activejdbc.Base;
-import org.junit.jupiter.api.Assertions.*;
 
 public class StepDefinitions {
 
     @Given("an example scenario")
     public void anExampleScenario() {
-        if(!Base.hasConnection()) {
-            Base.open(
-                    "com.mysql.jdbc.Driver",
-                    "jdbc:mysql://localhost/bank",
-                    "myTeller",
-                    "password"
-            );
+        String url = "jdbc:mysql://localhost:3306/nicebank";
+        String user = "myTeller";
+        String password = "password";
+
+        try {
+            Base.open("com.mysql.cj.jdbc.Driver", url, user, password);
+        } catch (Exception e) {
+            System.err.println(e.getCause());
+            System.err.println(e.getMessage());
         }
-        // Account account = new Account("1234");
+
+        Account.findAll()
+                .stream().forEach(System.out::println);
     }
 
     @When("all step definitions are implemented")

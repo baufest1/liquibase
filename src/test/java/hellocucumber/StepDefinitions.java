@@ -1,10 +1,13 @@
 package hellocucumber;
 
 import hellocucumber.nicebank.Account;
-import io.cucumber.java.en.*;
-
+import hellocucumber.nicebank.AtmServer;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.javalite.activejdbc.Base;
-import org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
 
 public class StepDefinitions {
 
@@ -13,12 +16,19 @@ public class StepDefinitions {
         if(!Base.hasConnection()) {
             Base.open(
                     "com.mysql.jdbc.Driver",
-                    "jdbc:mysql://localhost/bank",
-                    "myteller",
-                    "password"
+                    "jdbc:mysql://localhost/explorecalifornia2",
+                    "californiauser",
+                    "ThePassword"
             );
         }
-        // Account account = new Account("1234");
+
+        System.out.printf("successful connection!");
+
+        try {
+            new AtmServer(9988).start();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @When("all step definitions are implemented")

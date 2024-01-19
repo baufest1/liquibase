@@ -136,15 +136,9 @@
                 <configuration>
                     <outputChangeLogFile>src/test/resources/explorecalifornia.mysql.sql</outputChangeLogFile>
                     <driver>com.mysql.jdbc.Driver</driver>
-<<<<<<< HEAD
                     <url>jdbc:mysql://localhost/explorecalifornia2</url>
                     <username>californiauser</username>
                     <password>ThePassword</password>
-=======
-                    <url>jdbc:mysql://localhost/bank</url>
-                    <username>myTeller</username>
-                    <password>password</password>
->>>>>>> refs/remotes/origin/main
                 </configuration>
                 <dependencies>
                     <dependency>

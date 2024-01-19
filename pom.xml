@@ -40,6 +40,12 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>8.2.0</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -130,9 +136,15 @@
                 <configuration>
                     <outputChangeLogFile>src/test/resources/explorecalifornia.mysql.sql</outputChangeLogFile>
                     <driver>com.mysql.jdbc.Driver</driver>
+<<<<<<< HEAD
                     <url>jdbc:mysql://localhost/explorecalifornia2</url>
                     <username>californiauser</username>
                     <password>ThePassword</password>
+=======
+                    <url>jdbc:mysql://localhost/bank</url>
+                    <username>myTeller</username>
+                    <password>password</password>
+>>>>>>> refs/remotes/origin/main
                 </configuration>
                 <dependencies>
                     <dependency>

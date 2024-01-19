@@ -1,13 +1,10 @@
 package hellocucumber;
 
-import hellocucumber.nicebank.Account;
 import hellocucumber.nicebank.AtmServer;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.javalite.activejdbc.Base;
-
-import java.util.List;
 
 public class StepDefinitions {
 

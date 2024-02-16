@@ -136,7 +136,7 @@
                 <configuration>
                     <outputChangeLogFile>src/test/resources/explorecalifornia.mysql.sql</outputChangeLogFile>
                     <driver>com.mysql.jdbc.Driver</driver>
-                    <url>jdbc:mysql://localhost/explorecalifornia2</url>
+                    <url>jdbc:mysql://localhost/explorecalifornia</url>
                     <username>californiauser</username>
                     <password>ThePassword</password>
                 </configuration>
